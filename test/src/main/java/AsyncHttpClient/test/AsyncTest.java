@@ -14,6 +14,7 @@ public class AsyncTest {
 		Future<Response> f = asyncHttpClient.prepareGet("http://www.baidu.com/").execute();
 		Response r = f.get();
 		System.out.println(r.getResponseBody()); 
+		r.getResponseBodyAsStream(); 
 	}
 	
 }
